@@ -14,10 +14,10 @@ public class Human {
 	private String[] affiliation = new String[100];
 
 	//
-	public Human() {
-		for (int i = 0; i < name.length; i++) {
+	public void Human() {
+		for (int i = 0; i < this.name.length; i++) {
 			System.out.println(
-					"이름 : " + name[i] + "나이 : " + age[i] + "성별 없냐? : " + "직업 : " + job[i] + "소속 : " + affiliation[i]);
+					"이름 : " + this.name[i] + "나이 : " + this.age[i] + "성별 없냐? : " + "직업 : " + this.job[i] + "소속 : " + this.affiliation[i]);
 		}
 	}
 
