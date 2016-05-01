@@ -28,6 +28,7 @@ public class Circle {
 		if (!(obj instanceof Circle)) {
 			return false;
 		}
+		
 		Circle circle = (Circle) obj;
 		if (radius == circle.radius) {
 			return true;
@@ -41,6 +42,7 @@ public class Circle {
 		Circle a2 = new Circle(5, 3, 5);
 
 		System.out.println(a1.equals(a2));
+
 		if (a1.equals(a2)) {
 			if (a1 == a2) {
 				System.out.println("반지름도 객체 주소도 같아");

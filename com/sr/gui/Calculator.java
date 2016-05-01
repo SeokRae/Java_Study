@@ -43,7 +43,7 @@ class MyFrame extends JFrame {
 	}
 }
 
-public class Calculator {
+ class Calculator {
 	public static void main(String[] args) {
 		new MyFrame();
 	}

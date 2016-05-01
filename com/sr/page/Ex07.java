@@ -12,22 +12,22 @@ import java.util.Scanner;
  */
 public class Ex07 {
 	public static void main(String[] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
 		int count = 0;
-		String[] str = sc.nextLine().split(" ");
-
-		for (int i = 0; i < str.length; i++) {
-			System.out.print(str[i] + "\t");
-			count++;
-		}
-		
 		System.out.println(count);
-		
+
 		InputStreamReader rd = new InputStreamReader(System.in);
 		try {
 			while (true) {
 
+				String[] str = sc.toString().split(" ");
+				
+				for (int i = 0; i < str.length; i++) {
+					System.out.print(str[i] + "\t");
+					count++;
+				}
+				
 				int c = rd.read();
 				if (c == -1) {
 					break;
