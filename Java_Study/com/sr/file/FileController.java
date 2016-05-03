@@ -17,14 +17,14 @@ public class FileController {
 
 	FileController() {
 		afvo = new ArrayList<FileVO>();
-		fdao = new FileDAO();
-		fs = new FileSort();
+		fdao = new FileDAO(afvo);
+		fs = new FileSort(afvo);
 		menu();
 	}
 
 	public void menu() {
 		while (true) {
-			System.out.print("선택 1. 무작위, 2. 정렬 : ");
+			System.out.print("선택 1. 무작위, 2. 정렬, 3. 지역 검색, 4. 연봉 검색, 5. 회사 선택 : ");
 			int select = sc.nextInt();
 
 			switch (select) {
@@ -39,7 +39,7 @@ public class FileController {
 			case 3:
 				System.out.print("원하시는 지역을 입력하세요.: ");
 				String str = sc.next();
-				fs.areaSort(str, afvo);
+				fs.strSort(str, afvo);
 				break;
 			case 4:
 				System.out.println("검색하시려는 연봉을 입력하세요.");
@@ -64,6 +64,13 @@ public class FileController {
 					System.out.println("2000 ~ 5000 범위의 값을 입력하세요.");
 				}
 				break;
+			case 5:
+				System.out.println("회사 이름 입력하세요.");
+				System.out.println("예) 한국회사");
+				str = sc.next();
+				fs.strSort(str, afvo);
+				break;
+
 			default:
 				System.out.println("에러야..");
 				return;

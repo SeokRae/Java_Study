@@ -1,42 +1,20 @@
 package com.sr.file;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 public class FileSort {
-	Scanner sc = new Scanner(System.in);
-	List<FileVO> afvo;
 	FileDAO fdao;
 	FileSort fs;
 
-	FileSort() {
+	FileSort(List<FileVO> afvo) {
 		// TODO Auto-generated constructor stub
-		afvo = new ArrayList<FileVO>();
 		fdao = new FileDAO(afvo);
-	}
 
-	FileSort(int select) {
-		switch (select) {
-		case 1:
-
-			break;
-		case 2:
-			fs.fileSort(afvo);
-			break;
-		case 3:
-			fs.areaSort(str, afvo);
-			break;
-		case 4:
-			fs.salarySort(salary, afvo);
-			break;
-		default:
-
-		}
 	}
 
 	// default print
+	// 기본 파일을 불러와서 출력해 주는 메소드
 	public void fileShow(List<FileVO> afvo) {
 
 		// for (FileVO fvo : afvo) {
@@ -53,6 +31,7 @@ public class FileSort {
 	}
 
 	// default sort print
+	// 파일 순위 정렬
 	public void fileSort(List<FileVO> afvo) {
 		// 기본 정렬
 		Collections.sort(afvo);
@@ -73,7 +52,8 @@ public class FileSort {
 	}
 
 	// area sort print
-	public void areaSort(String str, List<FileVO> afvo) {
+	// 지역 정렬 메소드
+	public void strSort(String str, List<FileVO> afvo) {
 		// 지역 선택 출력
 		for (int i = 0; i < afvo.size(); i++) {
 			if ((afvo.get(i).toString().contains(str))) {
@@ -82,6 +62,7 @@ public class FileSort {
 		}
 	}
 
+	// 연봉 구간 정렬 메소드
 	public void salarySort(int salary, List<FileVO> afvo) {
 		// 연봉 구간 출력
 		for (int i = 0; i < afvo.size(); i++) {
@@ -92,7 +73,9 @@ public class FileSort {
 
 	}
 
+
 	// sleep method
+	// pause를 위한 메소드
 	private void sleep(int time) {
 		try {
 			Thread.sleep(time);

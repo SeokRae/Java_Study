@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -15,7 +14,7 @@ import java.util.StringTokenizer;
  * 
  */
 public class FileDAO {
-	File file = new File("C:\\Users\\kimSR\\workspace\\Java_Study\\src\\com\\sr\\file\\대졸연봉순위.csv");
+	File file = new File("C:\\Users\\user\\workspace\\Java_Study\\com\\sr\\file대졸연봉순위.csv");
 
 	FileDAO() {
 		// TODO Auto-generated constructor stub
